@@ -32,7 +32,7 @@ int main(void)
 	}
 	if ((v < 6) && (v != 0))
 	{
-		printf("and is less than 6\n");
+		printf("and is less than 6 and not 0\n");
 	}
 	return (0);
 }
