@@ -4,8 +4,9 @@
 #include <stdio.h>
 /* betty style doc for function main goes there */
 /**
- *This program generates random numbers and checks if
- *they are positive, negative or equal to zero
+ * This program generates a different random number each time
+ * it is run and then checks whether the generated number is
+ * positive, negative or equal to zero
  */ 
 int main(void)
 {
@@ -16,14 +17,15 @@ int main(void)
 	/* your code goes there */
 	if (n > 0)
 	{
-		printf("%d is positive\n");
+		printf("%d is positive\n",n);
 	}
 	if (n < 0)
 	{
-		printf("%d is negative\n");
+		printf("%d is negative\n",n);
 	}
 	else
 	{
-		printf("%d is zero\n")
+		printf("%d is zero\n",n);
+	}
 	return (0);
 }
