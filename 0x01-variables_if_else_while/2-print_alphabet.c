@@ -2,12 +2,12 @@
 /**
  * main - entry point
  * Description: This program uses putchar to
- * print all the english alphabets 
+ * print all the english alphabets
  *
  * Return: Always returns 0 (success)
  */
 
-int main (void)
+int main(void)
 {
 	char alphabets[27] = "abcdefghijklmnopqrstuvwxyz\n";
 	int i;
