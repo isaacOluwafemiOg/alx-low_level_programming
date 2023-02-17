@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(void)
 {
-	char myarr[5][] = {"char", "int", "long int", "long long int", "float"};
+	char myarr[][5] = {"char", "int", "long int", "long long int", "float"};
 	int i;
 	for (i=0; i<5; i++)
 	{
