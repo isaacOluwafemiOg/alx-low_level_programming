@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
- *
  * print_alphabet - print lowercase english alphabets
  *
  * Return: Always 0 (success)
