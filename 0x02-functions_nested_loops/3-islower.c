@@ -11,12 +11,16 @@
 
 int _islower(int c)
 {
+	int res;
+
 	if (islower(c))
 	{
-		return (1);
+		res = 1;
 	}
 	else
 	{
-		return (0);
+		res = 0;
 	}
+
+	return (res);
 }
