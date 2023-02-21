@@ -18,12 +18,11 @@ void print_alphabet(void)
 		putchar(i);
 	}
 	putchar('\n');
-
-	return (0);
 }
 
 int main(void)
 {
+	void print_alphabet(void);
 
 	print_alphabet();
 	return (0);
