@@ -13,6 +13,7 @@
 int main(void)
 {
 	int i;
+
 	char v[] = "_putchar\n";
 	for (i = 0; i < 9; i++)
 	{
