@@ -8,7 +8,6 @@
  * Return: Always 0 (success)
  *
  */
-void print_alphabet(void);
 
 void print_alphabet(void)
 {
@@ -19,10 +18,4 @@ void print_alphabet(void)
 		putchar(i);
 	}
 	putchar('\n');
-}
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
 }
