@@ -10,7 +10,7 @@
  *
  */
 
-int main(void)
+int main()
 {
 	int i;
 	char v[] = "_putchar\n";
