@@ -8,7 +8,7 @@
  * Return: returns 1 if uppercase else 0
  */
 
-int _isupper(int c)
+int _isdigit(int c)
 {
 	int res;
 
