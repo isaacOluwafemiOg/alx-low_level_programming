@@ -2,6 +2,8 @@
 /**
  * main - entry to program
  *
+ * prime_check - finds out if an input is prime or not
+ * @v: the input to prime_check
  * Return: returns 0 always
  */
 
