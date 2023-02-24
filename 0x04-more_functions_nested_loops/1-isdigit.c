@@ -3,7 +3,7 @@
 /**
  * _isdigit - checks if an input is a decimal digit
  *
- * c: the input
+ * @c: the input
  *
  * Return: returns 1 if uppercase else 0
  */
