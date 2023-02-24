@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include "main.h"
 /**
- * _isupper - checks if an input is uppercase or not
- * 
+ * _isupper - checks if an input is an uppercase letter
+ *
  * c: the input
  *
  * Return: returns 1 if uppercase else 0
