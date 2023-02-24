@@ -8,8 +8,9 @@
 void print_most_numbers(void)
 {
 	int i;
-	
+
 	int my[] = {'0', '1', '3', '5', '6', '7', '8', '9'};
+
 	for (i = 0; i < 8; i++)
 	{
 		putchar(my[i]);
