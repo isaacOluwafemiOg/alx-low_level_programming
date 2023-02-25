@@ -24,6 +24,7 @@ int digitnum(int v)
 	return (count);
 }
 
+
 /**
  * print_number - print any integer using putchar
  *
@@ -32,15 +33,33 @@ int digitnum(int v)
 
 void print_number(int n)
 {
-	int i, j, new;
+	int i, j, count, new, nn;
 
-	j = digitnum(n);
+/*	j = digitnum(n); */
 
 	if (n < 0)
 	{
 		putchar('-');
 		n = n * -1;
+	
 	}
+
+	nn = n;
+	count = 0;
+	if (nn == 0)
+	{
+		j = 1;
+	}
+	else
+	{
+		while (n !=0)
+		{
+			n = n / 10;
+			count++;
+		}
+		j = count;
+	}
+
 	while (j > 1)
 	{
 		new = n;
