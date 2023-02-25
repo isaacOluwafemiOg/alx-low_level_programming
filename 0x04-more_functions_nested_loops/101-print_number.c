@@ -35,29 +35,13 @@ void print_number(int n)
 {
 	int i, j, count, new, nn;
 
-/*	j = digitnum(n); */
+	j = digitnum(n);
 
 	if (n < 0)
 	{
 		putchar('-');
 		n = n * -1;
 	
-	}
-
-	nn = n;
-	count = 0;
-	if (nn == 0)
-	{
-		j = 1;
-	}
-	else
-	{
-		while (n !=0)
-		{
-			n = n / 10;
-			count++;
-		}
-		j = count;
 	}
 
 	while (j > 1)
