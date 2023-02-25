@@ -53,5 +53,5 @@ void print_number(int n)
 		j--;
 	}
 	putchar(n % 10 + '0');
-
+	putchar('\n');
 }
