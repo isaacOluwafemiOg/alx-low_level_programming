@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 /**
  * digitnum - get number of digits in integer
  *
@@ -36,7 +35,7 @@ void print_number(int n)
 	int i, j, new;
 
 	j = digitnum(n);
-	
+
 	if (n < 0)
 	{
 		putchar('-');
