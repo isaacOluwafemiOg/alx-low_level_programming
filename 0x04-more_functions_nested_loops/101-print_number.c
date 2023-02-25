@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * digitnum - get number of digits in integer
  *
