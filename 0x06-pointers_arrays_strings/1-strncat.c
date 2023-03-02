@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "main.h"
 #include <string.h>
+#include "main.h"
 
 /**
  * _strncat - imitates the strncat of the standard library
