@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * reverse_array - reverses an array of integers
  * @a: input array of integers to be reversed
@@ -12,12 +12,12 @@
 void reverse_array(int *a, int n)
 {
 	int i, j;
-	int v[n];
+	int *v;
 	int p;
 
 	n--;
 	j = n;
-
+	v = malloc(sizeof(n));
 	for (i = 0; i <= j; i++)
 	{
 		v[i] = *(a+n);
