@@ -15,7 +15,10 @@ char *_strncat(char *dest, char *src, int n)
 {
 	char *v;
 	int count;
+	int l;
 
+
+	l = (int) strlen(src);
 	v = dest;
 
 	while (*v != '\0')
@@ -31,7 +34,7 @@ char *_strncat(char *dest, char *src, int n)
 		count++;
 	}
 
-	if (strlen(src) < n)
+	if (l < n)
 	{
 		*v++ = '\0';
 	}
