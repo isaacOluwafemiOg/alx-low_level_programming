@@ -20,7 +20,7 @@ void reverse_array(int *a, int n)
 	v = malloc(sizeof(n));
 	for (i = 0; i <= j; i++)
 	{
-		v[i] = *(a+n);
+		v[i] = *(a + n);
 		n--;
 	}
 
