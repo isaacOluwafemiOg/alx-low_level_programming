@@ -14,6 +14,7 @@ int _strcmp(char *s1, char *s2)
 {
 	size_t count;
 	char *s11;
+
 	count = 0;
 
 	s11 = s1;
