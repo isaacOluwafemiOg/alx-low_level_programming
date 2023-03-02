@@ -13,10 +13,11 @@
 int _strcmp(char *s1, char *s2)
 {
 	size_t count;
-
+	char *s11;
 	count = 0;
 
-	while (count < strlen(s1))
+	s11 = s1;
+	while (count < strlen(s11))
 	{
 		if (*s1++ < *s2++)
 		{
@@ -28,9 +29,12 @@ int _strcmp(char *s1, char *s2)
 		}
 		count++;
 	}
-	if (strlen(s1) == strlen(s2))
+	if (*s1++ == *s2++)
 	{
 		return (0);
 	}
-	return (-15);
+	else
+	{
+		return (-15);
+	}
 }
