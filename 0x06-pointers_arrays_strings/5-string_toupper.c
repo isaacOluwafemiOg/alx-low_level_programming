@@ -1,6 +1,9 @@
 #include <ctype.h>
 #include <stdio.h>
 #include "main.h"
+#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * string_toupper - converts letters in a string to uppercase
@@ -11,22 +14,28 @@
 char *string_toupper(char *v)
 {
 	char *u;
-	char *w;
-	int count, i;
+	size_t i;
 
-	count = 0;
-	u = v;
+	u = malloc(strlen(v));
+	i = 0;
 
-	while (*v != '\0')
+	while (i < strlen(v))
 	{
-		*u++ = toupper(*v++);
-		count++;
+		if (v[i] >= 'a' && v[i] <= 'z')
+		{
+			u[i] = toupper(v[i]);
+		}
+		else
+		{
+			u[i] = v[i];
+		}
+		i++;
 	}
 
-	for (i = -1; i < count; i++)
+	for (i = 0; i < strlen(v); i++)
 	{
-		*w++ = *(v + i);
+		v[i] = u[i];
 	}
 
-	return (w);
+	return (v);
 }
