@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <string.h>
 
 /**
  * _strchr - lets you know the first occurance of c in the string s
@@ -11,11 +12,11 @@
 
 char *_strchr(char *s, char c)
 {
-	unsigned int i;
+	unsigned int i, j;
 	char *v;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (i < strlen(s))
 	{
 		if (s[i] == c)
 		{
@@ -23,7 +24,7 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	if (s[i] == '\0')
+	if (i == strlen(s))
 	{
 		v = 0;
 	}
