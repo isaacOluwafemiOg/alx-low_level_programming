@@ -13,7 +13,6 @@
 char *_strstr(char *haystack, char *needle)
 {
 	unsigned int i, j, k;
-	char *v;
 
 	for (i = 0; i < strlen(haystack); i++)
 	{
@@ -33,6 +32,5 @@ char *_strstr(char *haystack, char *needle)
 			}
 		}
 	}
-	v = 0;
 	return (NULL);
 }
