@@ -30,6 +30,10 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
+			if (atoi((const char *)argv[i]) < 0)
+			{
+				return (1);
+			}
 			u += atoi((const char *)argv[i]);
 		}
 		i++;
