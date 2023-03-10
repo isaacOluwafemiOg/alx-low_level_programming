@@ -26,8 +26,14 @@ int main(int argc, char *argv[])
 		i = 0;
 		a = argv[1];
 		u = atoi(a);
+
 		for (j = 0; j < 5; j++)
 		{
+			if (u < 0)
+			{
+				printf("%d\n", 0);
+				break;
+			}
 			if (u / deno[j] >= 1)
 			{
 				v = u / deno[j];
