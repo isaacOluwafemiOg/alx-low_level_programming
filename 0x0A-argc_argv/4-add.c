@@ -16,13 +16,13 @@ int main(int argc, char *argv[])
 
 	i = 1;
 	u = 0;
+	if (argc == 1)
+	{
+		printf("%d\n", 0);
+		return (0);
+	}
 	while (i < argc)
 	{
-		if (argc < 2)
-		{
-			printf("%d\n", 0);
-			break;
-		}
 		if (*argv[i] < '0' || *argv[i] > '9')
 		{
 			printf("Error\n");
