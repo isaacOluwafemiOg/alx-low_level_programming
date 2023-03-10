@@ -18,6 +18,11 @@ int main(int argc, char *argv[])
 	u = 0;
 	while (i < argc)
 	{
+		if (argc < 2)
+		{
+			printf("%d\n", 0);
+			break;
+		}
 		if (*argv[i] < '0' || *argv[i] > '9')
 		{
 			printf("Error\n");
