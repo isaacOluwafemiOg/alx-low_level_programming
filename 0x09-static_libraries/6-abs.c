@@ -3,8 +3,8 @@
 
 /**
  * _abs - absolute value
- * 
- * n is the input parameter to the function
+ *
+ * @n: is the input parameter to the function
  * Return: returns absolute value of the input
  *
  */

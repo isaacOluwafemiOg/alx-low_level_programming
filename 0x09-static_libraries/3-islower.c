@@ -3,8 +3,8 @@
 
 /**
  * _islower - checks whether an input value is lowercase or not
- * 
- * c is the input parameter to the _islower function
+ *
+ * @c: is the input parameter to the _islower function
  * Return: returns 1 when the input is lowercase and 0 if otherwise
  *
  */
