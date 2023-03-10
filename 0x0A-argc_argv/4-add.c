@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int u, i;
-	
+
 	i = 1;
 	u = 0;
 	while (i < argc)
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			u += atoi((const char*)argv[i]);
+			u += atoi((const char *)argv[i]);
 		}
 		i++;
 	}
