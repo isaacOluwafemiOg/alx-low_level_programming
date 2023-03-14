@@ -14,18 +14,16 @@ char *_strdup(char *str)
 {
 	char *v;
 	unsigned int i, j;
-	
+
 	if (str == NULL)
 	{
-		printf("failed to allocate memory\n");
 		return (NULL);
 	}
 	j = strlen(str);
 
-	v = malloc(j);
+	v = malloc(j + 1);
 	if (v == NULL)
 	{
-		printf("failed to allocate memory\n");
 		return (NULL);
 	}
 	i = 0;
