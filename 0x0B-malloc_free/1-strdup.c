@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * strdup - creates a copy of string input
+ * _strdup - creates a copy of string input
  * @str: string input to copy
  *
  * Return: pointer to copied string
@@ -20,6 +20,7 @@ char *_strdup(char *str)
 	v = malloc(j + 1);
 	if (v == NULL || str == NULL)
 	{
+		printf("failed to allocate memory");
 		return (NULL);
 	}
 	i = 0;
