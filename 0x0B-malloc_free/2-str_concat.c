@@ -16,6 +16,14 @@ char *str_concat(char *s1, char *s2)
 	char *v;
 	unsigned int i, j, k;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	i = strlen(s1) + strlen(s2) + 1;
 	v = malloc(i);
 	if (v == NULL)
