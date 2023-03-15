@@ -21,6 +21,12 @@ char **next_step(int *q, int c, int *r, char *str)
 	int j, i, s;
 	int *u;
 
+	printf("c is %d\n", c);
+	for (j = 0; j < c; j++)
+	{
+		printf("q[%d] is %d\n", j, q[j]);
+		printf("r[%d] is %d\n", j, r[j]);
+	}
 	v = malloc(sizeof(u) * c);
 	for (i = 0; i < c; i++)
 	{
