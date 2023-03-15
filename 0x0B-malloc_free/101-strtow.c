@@ -22,15 +22,19 @@ char **next_step(int *q, int c, int *r, char *str)
 	int *u;
 
 	printf("c is %d\n", c);
-	for (j = 0; j < c; j++)
-	{
-		printf("q[%d] is %d\n", j, q[j]);
-		printf("r[%d] is %d\n", j, r[j]);
-	}
+
 	v = malloc(sizeof(u) * c);
+	if (v == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < c; i++)
 	{
 		v[i] = (char *)malloc(q[i]);
+		if (v[i] == NULL)
+		{
+			return (NULL);
+		}
 		j = 0;
 		s = r[i];
 		while (str[s] != ' ')
@@ -53,6 +57,7 @@ char **next_step(int *q, int c, int *r, char *str)
 
 char **strtow(char *str)
 {
+	char **v;
 	int *q;
 	int *r;
 	unsigned int c, i;
@@ -64,7 +69,15 @@ char **strtow(char *str)
 	}
 	c = 0;
 	q = malloc(sizeof(int) * (strlen(str) / 2));
+	if (q == NULL)
+	{
+		return (NULL);
+	}
 	r = malloc(sizeof(int) * (strlen(str) / 2));
+	if (r == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < strlen(str); i++)
 	{
 		w = str[i];
@@ -80,13 +93,8 @@ char **strtow(char *str)
 		}
 	}
 
-	printf("%d\n", c);
-/**	
- *	for (j = 0; j < c; j++)
- *	{
- *		printf("q[%d] is %d\n", j, q[j]);
- *		printf("r[%d] is %d\n", j, r[j]);
- *	}
- */
-	return (next_step(q, c, r, str));
+
+	v = next_step(q, c, r, str);
+
+	return (v);
 }
