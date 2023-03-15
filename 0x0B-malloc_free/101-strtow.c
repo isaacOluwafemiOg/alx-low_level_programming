@@ -79,5 +79,13 @@ char **strtow(char *str)
 			q[c - 1] = i - r[c];
 		}
 	}
+
+	
+	for (j = 0; j < c; j++)
+	{
+		printf("q[%d] is %d\n", j, q[j]);
+		printf("r[%d] is %d\n", j, r[j]);
+	}
+
 	return (next_step(q, c, r, str));
 }
