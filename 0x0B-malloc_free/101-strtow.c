@@ -17,54 +17,33 @@ char **strtow(char *str)
 	char *u;
 	int *q;
 	int *r;
-	unsigned int c, i, s;
-	int t, j;
-	
-	printf("very beginning");
+	unsigned int c, i, s, j;
+	char w;
+
 	c = 0;
 	q = malloc(sizeof(int) * (strlen(str) / 2));
 	r = malloc(sizeof(int) * (strlen(str) / 2));
-
-	printf("beginning");
 	for (i = 0; i < strlen(str); i++)
 	{
-		if (c == 0 && str[i] != ' ')
+		w = str[i];
+		if ((c == 0 && w != ' ') || (w != ' ' && str[i - 1] == ' '))
 		{
-
 			r[c] = i;
-			printf("first one occurs: %d\n", r[c]);
-			t = 1;
 			c++;
 			while ((str[i + 1] != ' ') && (i + 1 != strlen(str)))
 			{
-				t++;
 				i++;
 			}
-			q[c-1] = t;
-			printf("size of first: %d\n", q[c-1]);
-
-		}
-		else if (str[i] != ' ' && str[i-1] == ' ')
-		{
-			r[c] = i;
-			t = 1;
-			c++;
-			while ((str[i + 1] != ' ') && (i + 1 != strlen(str)))
-			{
-				t++;
-				i++;
-			}
-			q[c-1] = t;
+			q[c - 1] = i - r[c];
 		}
 	}
 	v = malloc(sizeof(u) * c);
-	
 	for (i = 0; i < c; i++)
 	{
 		v[i] = (char *)malloc(q[i] + 1);
 		j = 0;
 		s = r[i];
-		while (j < q[i] + 1)
+		while ((int)j < q[i] + 1)
 		{
 			v[i][j] = str[s];
 			s++;
@@ -74,4 +53,3 @@ char **strtow(char *str)
 	}
 	return (v);
 }
-
