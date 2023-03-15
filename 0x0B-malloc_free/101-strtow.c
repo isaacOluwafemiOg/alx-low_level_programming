@@ -20,6 +20,10 @@ char **strtow(char *str)
 	unsigned int c, i, s, j;
 	char w;
 
+	if (str == NULL || strlen(str) == 0)
+	{
+		return (NULL);
+	}
 	c = 0;
 	q = malloc(sizeof(int) * (strlen(str) / 2));
 	r = malloc(sizeof(int) * (strlen(str) / 2));
@@ -30,11 +34,6 @@ char **strtow(char *str)
 		{
 			r[c] = i;
 			c++;
-			while ((str[i + 1] != ' ') && (i + 1 != strlen(str)))
-			{
-				i++;
-			}
-			q[c - 1] = i - r[c];
 		}
 	}
 	v = malloc(sizeof(u) * c);
@@ -43,7 +42,7 @@ char **strtow(char *str)
 		v[i] = (char *)malloc(q[i] + 1);
 		j = 0;
 		s = r[i];
-		while ((int)j < q[i] + 1)
+		while (str[s] != ' ')
 		{
 			v[i][j] = str[s];
 			s++;
