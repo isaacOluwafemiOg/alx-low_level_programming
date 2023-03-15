@@ -62,7 +62,7 @@ char **strtow(char *str)
 	for (i = 0; i < strlen(str); i++)
 	{
 		w = str[i];
-		if ((c == 0 && w != ' ') || (w != ' ' && str[i - 1] == ' '))
+		if ((c == 0 && w != ' ') || (i != 0 && w != ' ' && str[i - 1] == ' '))
 		{
 			r[c] = i;
 			c++;
